@@ -1,1 +1,404 @@
-/* место для вашего кода */
+/* ===== ШАПКА =====*/
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.header__logo {
+  display: block;
+  grid-column: 2;
+  justify-self: center;
+  width: 148px;
+}
+
+.header__logo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header__menu {
+  display: flex;
+  gap: 20px;
+  list-style: circle;
+  padding-left: 0;
+  margin: 0;
+}
+
+.header__menu-item {
+  /* отступы*/  
+}
+
+.header__menu-item a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.header__menu-item:first-child {
+  list-style: none;
+}
+
+.address {
+  max-width: 240px;
+  justify-self: end;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.address a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+address a:hover {
+  border-bottom-color: black;
+}
+
+.address span {
+  /*стили текста*/
+}
+
+
+/*ОВЕРЛЕЙ ИЛИ МЕЙН*/
+
+
+.cover { 
+position: relative;
+min-height: 757px;
+background-image: url(../images/cover.jpg);
+background-size: cover;
+background-position: center;
+color: white;
+padding: 50px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 2;
+}
+
+.cover__title {
+  text-transform: uppercase;
+  font-size: 160px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+  max-width: 1000px;
+}
+
+.cover__title-text {
+  display: block;
+}
+
+.cover__title-text_left {
+  text-align: left;
+}
+
+.cover__title-text_center {
+  text-align: center;
+}
+
+.cover__title-text_right {
+  text-align: right;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  word-spacing: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cover__button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cover__button:hover {
+  background: white;
+  color: black;
+}
+
+/*  КАРТОЧКИ  */
+
+.lots {
+  padding: 50px;
+}
+
+.lots__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0 0 30px 0
+}
+
+.lots__list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.lots__item {
+  flex: 1;
+  min-height: 450px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin 0 0 20px 0;
+  align-items: start;
+}
+
+.card__text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  align-self: end;
+}
+
+.lots__more {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+}
+
+.lots__more:hover {
+  border-bottom-color: gray;
+}
+
+/*  ОБ АУКЦИОНЕ  */
+
+.about {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  gap: 50px
+}
+
+.about__logo {
+  grid-column: 1;
+  justify-self: center;
+  align-self: start;
+}
+
+.about__logo-image {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo-image img {
+  width: 70%;
+  height: auto;
+  display: block;
+}
+
+.about__column {
+  grid-column: 2;
+}
+
+.about__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+.about__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px
+}
+
+.about__text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/*  ПОДВАЛ  */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: start;
+  padding: 30px 50px;
+}
+
+.footer__address {
+  min-width: 240px;
+  justify-self: start;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+.footer__address a,
+.footer_address span { color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-size: 18px;
+}
+
+.footer__address a:hover {
+  border-bottom-color: black;
+}
+
+.footer__menu {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.footer__menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer__menu li {
+  margin-bottom: 10px;
+}
+
+.footer__menu li:last-child {
+  margin-bottom: 0;
+}
+
+.footer__menu a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-size: 18px;
+}
+
+.footer__menu a:hover {
+  border-bottom-color: black;
+}
+
+.footer__social {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__social li {
+  width: 48px;
+  height:48px;
+}
+
+.footer__social a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer__social img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: 0.3s;
+}
+
+.footer__social img:hover {
+  opacity: 0.7;
+}
