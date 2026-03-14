@@ -1,10 +1,15 @@
+/* * {
+  border: 2px solid red !important;
+} */
+
 /* ===== ШАПКА =====*/
 
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 30px 50px;
+  padding: 30px 50px; 
+  
 }
 
 .header__logo {
@@ -12,6 +17,7 @@
   grid-column: 2;
   justify-self: center;
   width: 148px;
+  margin-top: 20px;
 }
 
 .header__logo-image {
@@ -20,12 +26,23 @@
   display: block;
 }
 
+.header__nav {
+  grid-column: 1;  
+  justify-self: start;
+}
+
 .header__menu {
+  /*border:  5px solid orange; */
+  justify-self: stretch;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   list-style: circle;
-  padding-left: 0;
-  margin: 0;
+  
+}
+
+.header__menu {
+  position: relative;
+  bottom: 84px;
 }
 
 .header__menu-item {
@@ -33,9 +50,7 @@
 }
 
 .header__menu-item a {
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  /*стили*/
 }
 
 .header__menu-item:first-child {
@@ -43,19 +58,22 @@
 }
 
 .address {
+  position: relative;
+  grid-column: 3;
   max-width: 240px;
   justify-self: end;
   font-style: normal;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
+  align-items: start;
+  gap: 2px;
+  right: 40px;
+  bottom: 100px;
+
 }
 
 .address a {
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  /*стили текста*/
 }
 
 address a:hover {
@@ -102,9 +120,9 @@ justify-content: flex-end;
 
 .cover__title {
   text-transform: uppercase;
-  font-size: 160px;
+  font-size: 142px;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.1; 
   margin: 0 0 20px 0;
   max-width: 1000px;
 }
@@ -115,14 +133,17 @@ justify-content: flex-end;
 
 .cover__title-text_left {
   text-align: left;
+  
 }
 
 .cover__title-text_center {
   text-align: center;
+  
 }
 
 .cover__title-text_right {
   text-align: right;
+  
 }
 
 .cover__description {
@@ -134,10 +155,13 @@ justify-content: flex-end;
 
 .cover__description-text {
   font-size: 22px;
-  word-spacing: 20px;
+  word-spacing: 12px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0px;
+  font-weight: 400;
+  line-height: 28px;
 }
+
 
 .cover__button {
   background: transparent;
@@ -196,7 +220,7 @@ justify-content: flex-end;
   justify-content: space-between;
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .card::before {
@@ -230,25 +254,36 @@ justify-content: flex-end;
 }
 
 .card__title {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
-  margin 0 0 20px 0;
-  align-items: start;
+  text-decoration: underline;
+  margin: 0 0 20px 0;
+  align-self: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  right: 2px;
+  top: 8px;
+  border-bottom-color: white;
 }
 
 .card__text {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.4;
   margin: 0;
-  align-self: end;
+  align-self: flex-end;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: auto;
+  width: 230px;
+  box-sizing: border-box;
+  right: 13px;
+  top: 15px;
+
 }
 
 .lots__more {
   font-size: 20px;
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid black;
   padding-bottom: 2px;
 }
 
@@ -261,8 +296,8 @@ justify-content: flex-end;
 .about {
   padding: 50px;
   display: grid;
-  grid-template-columns: 430px 1fr;
-  gap: 50px
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
 }
 
 .about__logo {
@@ -279,42 +314,50 @@ justify-content: flex-end;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 50px;
+  margin-top: 30px;
 }
 
 .about__logo-image img {
-  width: 70%;
-  height: auto;
+  width: 148px;
+  height: 114px;
   display: block;
 }
 
 .about__column {
   grid-column: 2;
+  margin-top: 130px;
+  margin-left: 32px;
 }
 
 .about__title {
   font-size: 40px;
   text-transform: uppercase;
-  margin: 0 0 30px 0;
+  margin-bottom: 94px;
 }
 
 .about__text-block {
+  width: 100%;
+  max-width: 800px;
+  min-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 25px
+  gap: 24px;
 }
 
 .about__text {
   font-size: 18px;
   line-height: 1.5;
-  margin: 0;
+  width: 623px;
 }
 
 
 /*  ПОДВАЛ  */
 
 .footer {
+  margin-top: 105px;
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
   align-items: start;
   padding: 30px 50px;
 }
@@ -330,10 +373,8 @@ justify-content: flex-end;
 }
 
 .footer__address a,
-.footer_address span { color: black;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-size: 18px;
+.footer__address span { 
+  
 }
 
 .footer__address a:hover {
@@ -350,6 +391,7 @@ justify-content: flex-end;
   padding: 0;
   margin: 0;
   text-align: center;
+  line-height: 10px;
 }
 
 .footer__menu li {
@@ -361,21 +403,24 @@ justify-content: flex-end;
 }
 
 .footer__menu a {
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  font-size: 18px;
+ 
 }
 
 .footer__menu a:hover {
   border-bottom-color: black;
 }
 
+
+.footer__menu_main {
+  text-decoration: none;
+}
+
+
 .footer__social {
   grid-column: 3;
   justify-self: end;
   display: flex;
-  gap: 20px;
+  gap: 50px;
   list-style: none;
   padding: 0;
   margin: 0;
