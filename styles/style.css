@@ -1,6 +1,8 @@
-/* * {
-  border: 2px solid red !important;
-} */
+/* *{
+  border: 1px solid red;
+}
+
+*/
 
 /* ===== ШАПКА =====*/
 
@@ -16,8 +18,9 @@
   display: block;
   grid-column: 2;
   justify-self: center;
-  width: 148px;
-  margin-top: 20px;
+  width: 138px;
+  position: relative;
+  top: 17px;
 }
 
 .header__logo-image {
@@ -35,27 +38,35 @@
   /*border:  5px solid orange; */
   justify-self: stretch;
   display: flex;
-  gap: 40px;
+  gap: 33px;
   list-style: circle;
-  
-}
-
-.header__menu {
+  display: flex;
   position: relative;
-  bottom: 84px;
+  bottom: 81.2px;
 }
+ 
 
 .header__menu-item {
-  /* отступы*/  
+  font-size: 18px;
 }
 
 .header__menu-item a {
+  text-decoration: none;  
+  border-bottom: none; 
   /*стили*/
 }
 
 .header__menu-item:first-child {
   list-style: none;
 }
+
+.header__menu-item:not(:first-child) a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+}
+
 
 .address {
   position: relative;
@@ -66,21 +77,28 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 2px;
-  right: 40px;
-  bottom: 100px;
 
 }
 
 .address a {
+  position: relative;
+  right: 34px;
+  bottom: 82px;
+  text-decoration: underline;
+  font-size: 18px; 
   /*стили текста*/
 }
 
-address a:hover {
+.address a:hover {
   border-bottom-color: black;
 }
 
 .address span {
+  display: block;
+  position: relative;
+  right: 34px;
+  bottom: 77px;
+  font-size: 18px;
   /*стили текста*/
 }
 
@@ -120,11 +138,12 @@ justify-content: flex-end;
 
 .cover__title {
   text-transform: uppercase;
-  font-size: 142px;
+  font-size: 100px;
   font-weight: bold;
   line-height: 1.1; 
   margin: 0 0 20px 0;
   max-width: 1000px;
+  letter-spacing: 31px;
 }
 
 .cover__title-text {
@@ -133,17 +152,20 @@ justify-content: flex-end;
 
 .cover__title-text_left {
   text-align: left;
-  
+  margin-bottom: 20px;
 }
 
 .cover__title-text_center {
   text-align: center;
-  
+  margin-left: 36px;
+  margin-bottom: 109px;
 }
 
 .cover__title-text_right {
   text-align: right;
-  
+  position: relative;
+  left: 30px;
+  bottom: 80px;
 }
 
 .cover__description {
@@ -154,22 +176,24 @@ justify-content: flex-end;
 }
 
 .cover__description-text {
+  position: relative;
   font-size: 22px;
-  word-spacing: 12px;
+  word-spacing: 19px;
   text-transform: uppercase;
-  margin: 0px;
   font-weight: 400;
   line-height: 28px;
 }
 
 
 .cover__button {
+  position: relative;
+  bottom: 3px;
   background: transparent;
   border: 2px solid white;
   color: white;
   font-size: 22px;
   text-transform: uppercase;
-  padding: 15px 30px;
+  padding: 11px 30.2px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -182,13 +206,16 @@ justify-content: flex-end;
 /*  КАРТОЧКИ  */
 
 .lots {
-  padding: 50px;
+  padding: 0 50px 80px 50px;
 }
 
 .lots__title {
+  padding-top: 176px;
   font-size: 40px;
+  font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 30px 0
+  margin: 0 0 27px 0;
+  padding-left: 16px;
 }
 
 .lots__list {
@@ -214,13 +241,13 @@ justify-content: flex-end;
 .card {
   position: relative;
   height: 100%;
-  padding: 40px;
+  padding: 48px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-size: cover;
   background-position: center;
-  border-radius: 0px;
+  background-repeat: no-repeat;
 }
 
 .card::before {
@@ -230,9 +257,34 @@ justify-content: flex-end;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: 1;
-  border-radius: 20px;
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin: 0 0 20px 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .card_type_film {
@@ -247,75 +299,50 @@ justify-content: flex-end;
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.card__title,
-.card__text {
-  position: relative;
-  z-index: 2;
-}
-
-.card__title {
-  font-size: 19px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: underline;
-  margin: 0 0 20px 0;
-  align-self: flex-start;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  right: 2px;
-  top: 8px;
-  border-bottom-color: white;
-}
-
-.card__text {
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 0;
-  align-self: flex-end;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: auto;
-  width: 230px;
-  box-sizing: border-box;
-  right: 13px;
-  top: 15px;
-
-}
 
 .lots__more {
+  position: relative;
+  bottom: 17px;
   font-size: 20px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
   padding-bottom: 2px;
+  margin-left: 16px;
+  display: inline-block;
 }
 
 .lots__more:hover {
-  border-bottom-color: gray;
+  opacity: 0.6;
 }
 
 /*  ОБ АУКЦИОНЕ  */
 
 .about {
-  padding: 50px;
+  padding: 80px 50px 150px 50px;
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 50px;
+  grid-template-columns: 310px 1fr;
+  gap: 25px;
+  align-items: start;
 }
 
 .about__logo {
   grid-column: 1;
   justify-self: center;
   align-self: start;
+  margin-top: 250px;
+  
 }
 
 .about__logo-image {
+  margin-left: 20px;
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
-  margin-top: 30px;
 }
 
 .about__logo-image img {
@@ -325,37 +352,41 @@ justify-content: flex-end;
 }
 
 .about__column {
+  padding-top: 80px;
   grid-column: 2;
-  margin-top: 130px;
-  margin-left: 32px;
+  max-width: 660px; 
 }
 
 .about__title {
+  padding-bottom: 66px;
   font-size: 40px;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 94px;
+  margin: 0 0 30px 0;
+  letter-spacing: normal;
 }
 
 .about__text-block {
-  width: 100%;
-  max-width: 800px;
-  min-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
+  width: 690px;
 }
 
 .about__text {
-  font-size: 18px;
-  line-height: 1.5;
-  width: 623px;
+  font-size: 20px;
+  line-height: ;
+  margin: 0;
+  color: #000;
+  text-align: left;
+  max-width: 800px;
 }
 
 
 /*  ПОДВАЛ  */
 
 .footer {
-  margin-top: 105px;
+  margin-bottom: 120px;
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   align-items: start;
