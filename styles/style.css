@@ -1,26 +1,17 @@
-/* *{
-  border: 1px solid red;
-}
-
-*/
-
 /* ===== ШАПКА =====*/
 
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 30px 50px; 
+  padding: 90px 50px; 
   
 }
 
 .header__logo {
   display: block;
-  grid-column: 2;
   justify-self: center;
   width: 138px;
-  position: relative;
-  top: 17px;
 }
 
 .header__logo-image {
@@ -30,19 +21,14 @@
 }
 
 .header__nav {
-  grid-column: 1;  
   justify-self: start;
 }
 
 .header__menu {
-  /*border:  5px solid orange; */
   justify-self: stretch;
   display: flex;
   gap: 33px;
   list-style: circle;
-  display: flex;
-  position: relative;
-  bottom: 81.2px;
 }
  
 
@@ -53,8 +39,8 @@
 .header__menu-item a {
   text-decoration: none;  
   border-bottom: none; 
-  /*стили*/
 }
+ 
 
 .header__menu-item:first-child {
   list-style: none;
@@ -69,24 +55,20 @@
 
 
 .address {
-  position: relative;
-  grid-column: 3;
-  max-width: 240px;
+  width: 240px;
   justify-self: end;
   font-style: normal;
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 2px;
+  gap: 5px;
 
 }
 
 .address a {
-  position: relative;
-  right: 34px;
-  bottom: 82px;
   text-decoration: underline;
   font-size: 18px; 
-  /*стили текста*/
 }
 
 .address a:hover {
@@ -95,11 +77,7 @@
 
 .address span {
   display: block;
-  position: relative;
-  right: 34px;
-  bottom: 77px;
   font-size: 18px;
-  /*стили текста*/
 }
 
 
@@ -151,28 +129,26 @@ justify-content: flex-end;
 }
 
 .cover__title-text_left {
+  width: 400px;
   text-align: left;
-  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .cover__title-text_center {
   text-align: center;
-  margin-left: 36px;
-  margin-bottom: 109px;
+  padding: 0 0 30px 24px;
 }
 
 .cover__title-text_right {
   text-align: right;
-  position: relative;
-  left: 30px;
-  bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .cover__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  width: 1000px;
 }
 
 .cover__description-text {
@@ -394,12 +370,13 @@ justify-content: flex-end;
 }
 
 .footer__address {
-  min-width: 240px;
+  width: 240px;
   justify-self: start;
   font-style: normal;
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 2px;
   gap: 5px;
 }
 
@@ -413,7 +390,6 @@ justify-content: flex-end;
 }
 
 .footer__menu {
-  grid-column: 2;
   justify-self: center;
 }
 
@@ -448,7 +424,6 @@ justify-content: flex-end;
 
 
 .footer__social {
-  grid-column: 3;
   justify-self: end;
   display: flex;
   gap: 50px;
