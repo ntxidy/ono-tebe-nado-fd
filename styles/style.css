@@ -256,10 +256,6 @@
   display: inline-block;
 }
 
-.lots__more a {
-  border-bottom: 1px solid black;
-}
-
 .lots__more:hover {
   opacity: 0.6;
 }
