@@ -78,7 +78,7 @@
 
 .cover {
   position: relative;
-  height: 757px;
+  min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
@@ -182,14 +182,14 @@
   display: flex;
   gap: 25px;
   list-style: none;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0 0 30px 0;
 }
 
 .lots__item {
-  flex: 1;
   width: 334px;
-  height: 596px;
+  min-height: 596px;
 }
 
 .card-link {
@@ -252,11 +252,11 @@
   padding-left: 44px;
   font-size: 20px;
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
   display: inline-block;
 }
 
-.lots__more span {
+.lots__more a {
   border-bottom: 1px solid black;
 }
 
